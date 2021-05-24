@@ -18,3 +18,38 @@ body {
     width: 100%;
     background-color: var(--primary-white);
 }
+
+
+
+/* NAVBAR */
+
+#navbar {
+    width: 100%;
+}
+
+#navbar > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+
+#navbar > ul > li {
+    padding: 1em 1.5em;
+}
+
+#navbar > ul > li > a {
+    font-family: 'Nunito', sans-serif;
+    color: var(--first-tint);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar-link {
+    font-weight: 300;
+}
+
+.navbar-active-link {
+    font-weight: 600;
+}
