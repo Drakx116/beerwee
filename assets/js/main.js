@@ -5,7 +5,7 @@ const validate = document.getElementById('validate-entrance');
 validate.onclick = e => {
     document.body.style.overflow = 'hidden';
     slideUp(entrance, 750).then(() => {
-        slideDown(main).then(() => {
+        slideDown(main, 500).then(() => {
             document.body.style.overflow = 'auto';
         });
     });
@@ -68,7 +68,7 @@ const slideDown = async (target, duration = 500) => {
         target.style.removeProperty('overflow');
         target.style.removeProperty('transition-duration');
         target.style.removeProperty('transition-property');
-    }, duration);
+    }, 250);
 
     return true;
 }
