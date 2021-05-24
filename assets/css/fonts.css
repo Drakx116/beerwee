@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito/Nunito Regular 400.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'PostNoBillsJaffna';
+    src: url('../fonts/Post No Bills Jaffna/Post No Bills Jaffna Regular 400.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
