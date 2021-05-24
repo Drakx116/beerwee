@@ -1,0 +1,24 @@
+root {
+    /* BASICS */
+    --primary-grey: #AAAAAA;
+    --secondary-grey: #DDDDDD;
+    --light-grey: #F4F4F4;
+    --secondary-white: #FAFAFA;
+    --primary-white: #FAFAFA;
+
+    /* PRIMARY TINTS */
+    --first-tint: #181D3D;
+    --second-tint: #8CF5DD;
+    --third-tint: #F36A5F;
+    --fourth-tint: #FFB61D;
+    --fifth-tint: #FDBD9E;
+
+    /* STATES */
+    --warning-state: #FFBB33;
+    --alert-state: #F02B6A;
+    --success-state: #1ACC94;
+
+    /* SHADOWS */
+    --black-shadow: rgba(0, 0, 0, 0.2);
+    --shadow: 0 3px 1px 0 var(--black-shadow);
+}
