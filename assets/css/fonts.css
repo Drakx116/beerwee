@@ -6,8 +6,23 @@
 }
 
 @font-face {
+    font-family: 'Nunito Light';
+    src: url('../fonts/Nunito/Nunito Light 300.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
     font-family: 'Post No Bills Jaffna';
     src: url('../fonts/Post No Bills Jaffna/Post No Bills Jaffna Regular 400.ttf');
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: 'Post No Bills Jaffna Bold';
+    src: url('../fonts/Post No Bills Jaffna/Post No Bills Jaffna Bold 700.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
