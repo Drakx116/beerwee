@@ -6,6 +6,15 @@
     --secondary-white: #FAFAFA;
     --primary-white: #FEFEFE;
 
+    /* DESIGN SYSTEM */
+    --primary-blue: #2B3368;
+    --primary-orange: #FFAD52;
+    --primary-red: #F36A5F;
+    --primary-pink: #FDBD9E;
+    --secondary-dark-blue: #22284B;
+    --secondary-light-blue: #8CF5DD;
+    --white: #FFFFFF;
+
     /* PRIMARY TINTS */
     --first-tint: #181D3D;
     --second-tint: #8CF5DD;
