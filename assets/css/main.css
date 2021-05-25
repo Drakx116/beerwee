@@ -242,3 +242,14 @@ body {
     margin-top: -220px;
     margin-left: 80%;
 }
+
+#slogan-text {
+    position: absolute;
+    width: 50%;
+    margin: -850px 0 0 25%;
+    font-family: "Nunito Light", sans-serif;
+    font-size: 64px;
+    text-align: center;
+    color: var(--white);
+    line-height: 96px;
+}
