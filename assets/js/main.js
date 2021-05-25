@@ -2,13 +2,22 @@ const entrance = document.getElementById('entrance');
 const main = document.getElementById('main');
 const validate = document.getElementById('validate-entrance');
 const illus = document.getElementById('entrance-illus');
+const presentation = document.getElementById('presentation');
 
 validate.onclick = async e => {
     document.body.style.overflow = 'hidden';
     illus.style.display = 'none';
 
+
+    // presentation.className = "bottom-displayed";
+
     await slideUp(entrance, 1200);
+    await bottomReveal(presentation, 1200);
+
     document.body.style.overflow = 'auto';
+
+    // PRESENTATION
+    // presentation.className = "bottom-hidden";
 }
 
 
@@ -43,6 +52,14 @@ async function slideUp(target, duration = 500) {
         target.style.removeProperty('transition-duration');
         target.style.removeProperty('transition-property');
     }, duration);
+
+    return new Promise(resolve => { setTimeout(resolve, duration) });
+}
+
+async function bottomReveal(target, duration = 500) {
+    target.style.opacity = "1";
+    target.style.transform = "translateY(0)";
+    target.style.transitionDuration = duration + 'ms';
 
     return new Promise(resolve => { setTimeout(resolve, duration) });
 }

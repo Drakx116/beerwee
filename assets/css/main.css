@@ -175,9 +175,12 @@ body {
 #presentation {
     display: flex;
     flex-direction: column;
-    width: calc(40% - 5em);
-    padding: 2.5em;
-    margin: auto;
+    width: calc(40% - 4em);
+    padding: 2em;
+    margin: 2em auto;
+    border: 2px solid red;
+    transform: translateY(1000px);
+    opacity: 0;
 }
 
 #presentation-title {
