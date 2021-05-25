@@ -1,6 +1,10 @@
+/* ROOT */
+
 body {
     background-color: var(--primary-white);
 }
+
+
 
 /* SECTIONS */
 
@@ -22,7 +26,6 @@ body {
 
 
 /* ENTRANCE */
-
 
 #entrance-header {
     display: flex;
@@ -100,6 +103,7 @@ body {
 }
 
 
+
 /* NAVBAR */
 
 #navbar {
@@ -131,4 +135,69 @@ body {
 
 .navbar-active-link {
     font-weight: 600;
+}
+
+
+
+/* JUMBOTRON */
+
+#collage-bottle {
+    position: absolute;
+    z-index: 2;
+    height: 800px;
+    margin-left: 250px;
+}
+
+#collage:before {
+    display: none;
+    position: absolute;
+    content: url("../img/white-leaf.png");
+    top: 515px;
+    left: 170px;
+    z-index: 1;
+}
+
+#collage:after {
+    display: none;
+    position: absolute;
+    content: url("../img/pink-leaf.png");
+    top: 300px;
+    left: 140px;
+    z-index: 0;
+}
+
+
+#presentation {
+    display: flex;
+    flex-direction: column;
+    width: calc(40% - 5em);
+    padding: 2.5em;
+    margin: auto;
+}
+
+#presentation-title {
+    margin-top: 0.75em;
+    font-family: "Post No Bills Jaffna Bold", serif;
+    font-size: 140px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    color: var(--primary-blue);
+}
+
+#presentation-description {
+    margin-top: 1em;
+}
+
+#presentation-description > p {
+    margin-top: 2em;
+    font-family: "Nunito Light", serif;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#presentation-rafters {
+    margin: 1em auto;
+    width: 96px;
 }
