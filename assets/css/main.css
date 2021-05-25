@@ -97,6 +97,11 @@ body {
     background-color: var(--primary-pink);
 }
 
+#validate-entrance:hover {
+    background-image: url("../img/beer.gif");
+    background-position: center;
+}
+
 #entrance-illus {
     position: absolute;
     bottom: 0;
