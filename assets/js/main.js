@@ -5,19 +5,10 @@ const illus = document.getElementById('entrance-illus');
 const presentation = document.getElementById('presentation');
 
 validate.onclick = async e => {
-    document.body.style.overflow = 'hidden';
     illus.style.display = 'none';
-
-
-    // presentation.className = "bottom-displayed";
 
     await slideUp(entrance, 1200);
     await bottomReveal(presentation, 1200);
-
-    document.body.style.overflow = 'auto';
-
-    // PRESENTATION
-    // presentation.className = "bottom-hidden";
 }
 
 
