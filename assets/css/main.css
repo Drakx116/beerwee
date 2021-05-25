@@ -222,3 +222,23 @@ body {
     margin: 1em auto;
     width: 96px;
 }
+
+
+
+/* SLOGAN */
+
+#slogan {
+    overflow: hidden;
+}
+
+#slogan-background > img {
+    width: 120%;
+    height: 80em;
+}
+
+#slogan-background:before {
+    position: absolute;
+    content: url("../img/boat.png");
+    margin-top: -220px;
+    margin-left: 80%;
+}
