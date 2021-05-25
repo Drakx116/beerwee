@@ -94,6 +94,11 @@ body {
     background-color: var(--primary-pink);
 }
 
+#entrance-illus {
+    position: absolute;
+    bottom: 0;
+}
+
 
 /* NAVBAR */
 
