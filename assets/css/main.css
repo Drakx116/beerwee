@@ -2,11 +2,11 @@ body {
     background-color: var(--primary-white);
 }
 
+/* SECTIONS */
+
 #entrance {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100vh;
     background-color: var(--first-tint);
@@ -19,6 +19,80 @@ body {
     background-color: var(--primary-white);
 }
 
+
+
+/* ENTRANCE */
+
+
+#entrance-header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#entrance-header > img {
+    padding: 2.5em 0;
+    width: 96px;
+}
+
+#entrance-modale {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(25% - 5em);
+    margin: 1.5em auto;
+    padding: 2.5em;
+    border-radius: 1.5em;
+    background-color: var(--secondary-dark-blue);
+    box-shadow: var(--shadow);
+}
+
+#entrance-hey {
+    font-family: "Post No Bills Jaffna Bold", serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--primary-white);
+}
+
+#entrance-label {
+    margin-top: .75em;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+#entrance-paragraph {
+    margin-top: 3em;
+    font-family: "Nunito Light", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--white);
+}
+
+#entrance-buttons {
+    margin-top: 1em;
+    font-family: "Post No Bills Jaffna", serif;
+    font-size: 40px;
+}
+
+#entrance-buttons > button {
+    width: 96px;
+    height: 96px;
+    margin: .5em 1em;
+    border: 0;
+    border-radius: 2em;
+    background-color: var(--white);
+    font-family: "Post No Bills Jaffna Bold", serif;
+    font-size: 40px;
+    color: var(--secondary-dark-blue);
+    cursor: pointer;
+}
+
+#entrance-buttons > button:hover {
+    background-color: var(--primary-pink);
+}
 
 
 /* NAVBAR */
