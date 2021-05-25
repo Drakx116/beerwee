@@ -1,9 +1,12 @@
 const entrance = document.getElementById('entrance');
 const main = document.getElementById('main');
 const validate = document.getElementById('validate-entrance');
+const illus = document.getElementById('entrance-illus');
 
 validate.onclick = e => {
     document.body.style.overflow = 'hidden';
+    illus.style.display = 'none';
+
     slideUp(entrance, 750).then(() => {
         slideDown(main, 500).then(() => {
             document.body.style.overflow = 'auto';
