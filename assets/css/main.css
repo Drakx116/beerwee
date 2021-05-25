@@ -167,6 +167,24 @@ body {
     margin-left: 170px;
 }
 
+#collage-right-bird {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 160px;
+}
+
+#collage-left-bird {
+    position: absolute;
+    margin-top: 650px;
+    margin-left: 650px;
+}
+
+#collage-zig-zag {
+    position: absolute;
+    margin-top: 0;
+    margin-left: 360px;
+}
+
 
 #presentation {
     display: flex;
@@ -174,7 +192,6 @@ body {
     width: calc(40% - 4em);
     padding: 2em;
     margin: 2em auto;
-    border: 2px solid red;
     transform: translateY(1000px);
     opacity: 0;
 }
