@@ -270,3 +270,85 @@ body {
     width: 300px;
     padding: 15px;
 }
+
+
+
+/* RECIPE */
+
+#recipe {
+    display: flex;
+    justify-content: center;
+    margin-top: 6em;
+}
+
+#recipe-grey-blob {
+    margin: auto;
+}
+
+#recipe-bottle {
+    position: absolute;
+}
+
+.recipe-ingredient {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    font-family: "Nunito Light", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+
+.recipe-bold {
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+}
+
+/* CULTIVATED */
+
+#recipe-cultivated {
+    margin-top: 180px;
+    margin-left: -450px;
+}
+
+#recipe-cultivated img {
+    width: 64px;
+}
+
+#recipe-cultivated p {
+    width: 120px;
+    text-align: right;
+}
+
+/* FRUITS */
+
+#recipe-fruits {
+    margin-top: 150px;
+    margin-left: 400px;
+}
+
+#recipe-fruits  img {
+    width: 40px;
+}
+
+#recipe-fruits  p {
+    margin-left: 1em;
+    width: 150px;
+}
+
+/* BREWING */
+
+#recipe-brewing {
+    margin-top: 420px;
+    margin-left: -450px;
+}
+
+#recipe-brewing  img {
+    width: 40px;
+}
+
+#recipe-brewing  p {
+    margin-left: 1em;
+    width: 120px;
+}
+
