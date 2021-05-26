@@ -26,3 +26,9 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/Sora/Sora SemiBold 600.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
