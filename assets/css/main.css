@@ -357,3 +357,84 @@ body {
     width: 120px;
 }
 
+
+
+/* ARTICLE */
+
+#article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8em;
+}
+
+#article-bottle {
+    margin-left: 25%;
+}
+
+#article-bottle > img {
+    height: 800px;
+}
+
+#article-content {
+    margin-top: -4em;
+    margin-left: 2em;
+    width: 35%;
+}
+
+#article-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+#article-heading > span {
+    font-family: "Post No Bills Jaffna Bold", serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--first-tint);
+    text-transform: uppercase;
+}
+
+#article-heading-quantity {
+    margin-left: 8px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: lowercase;
+}
+
+.article-section {
+    margin-top: 3em;
+}
+
+.article-section > span {
+    margin-top: 1em;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.article-section > p {
+    margin-top: .5em;
+    font-family: "Nunito Light", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#article-add-to-cart {
+    margin-top: 4em;
+}
+
+#article-add-to-cart > span {
+    font-family: "Nunito Light", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#article-add-to-cart > p {
+    width: 500px;
+    margin-top: 1em;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
