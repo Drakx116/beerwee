@@ -422,13 +422,86 @@ body {
 }
 
 #article-add-to-cart {
-    margin-top: 4em;
+    margin-top: 3em;
 }
 
-#article-add-to-cart > span {
+#article-add-to-cart > label {
     font-family: "Nunito Light", sans-serif;
     font-weight: 400;
     font-size: 16px;
+}
+
+#article-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#input-number-container {
+    display: flex;
+    margin-top: 1em;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    border: 1px solid var(--primary-grey);
+    border-radius: 1em;
+}
+
+#input-number {
+    width: 24px;
+    font-size: 18px;
+    border: 0;
+}
+
+#input-number:focus {
+    outline: 0;
+}
+
+#input-number-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid var(--primary-grey);
+}
+
+#input-number-buttons > span {
+    border: none;
+    width: 24px;
+    text-align: center;
+    font-family: Nunito, sans-serif;
+    font-size: 24px;
+    color: var(--first-tint);
+    cursor: pointer;
+    user-select: none;
+    outline: 0;
+}
+
+#button-buy {
+    margin-top: 1em;
+    margin-left: 2em;
+}
+
+#button-buy > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em 4em;
+    border: none;
+    border-radius: .5em;
+    background-color: var(--first-tint);
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+    cursor: pointer;
+}
+
+#button-buy > button:hover {
+    background-image: url("../img/beer.gif");
+    background-position: center;
+    background-size: cover;
 }
 
 #article-add-to-cart > p {
