@@ -185,13 +185,14 @@ body {
     margin-left: 360px;
 }
 
+/* PRESENTATION */
 
 #presentation {
     display: flex;
     flex-direction: column;
     width: calc(40% - 4em);
-    padding: 2em;
-    margin: 2em auto;
+    padding: 1em 2em;
+    margin: 0 auto;
     transform: translateY(1000px);
     opacity: 0;
 }
