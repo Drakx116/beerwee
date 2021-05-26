@@ -296,6 +296,7 @@ body {
     font-family: "Nunito Light", sans-serif;
     font-weight: 300;
     font-size: 24px;
+    line-height: 32px;
 }
 
 
@@ -312,23 +313,27 @@ body {
 }
 
 #recipe-cultivated img {
-    width: 64px;
+    width: 96px;
 }
 
 #recipe-cultivated p {
     width: 120px;
     text-align: right;
+    margin-top: 16px;
 }
 
 /* FRUITS */
 
 #recipe-fruits {
     margin-top: 150px;
-    margin-left: 400px;
+    margin-left: 360px;
 }
 
 #recipe-fruits  img {
-    width: 40px;
+    position: absolute;
+    width: 64px;
+    margin-top: 80px;
+    margin-left: 180px;
 }
 
 #recipe-fruits  p {
