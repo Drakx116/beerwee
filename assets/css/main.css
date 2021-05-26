@@ -278,7 +278,7 @@ body {
 #recipe {
     display: flex;
     justify-content: center;
-    margin-top: 6em;
+    margin-top: 10em;
 }
 
 #recipe-grey-blob {
