@@ -558,15 +558,13 @@ body {
 /* BOTTOM */
 
 #bottom {
-    position: relative;
-    overflow: hidden;
-    margin-top: -30em;
+    margin-top: -20%;
     line-height: 0;
 }
 
 #bottom img {
-    width: 134%;
-    margin-left: -17%;
+    width: 100%;
+    height: 70vh;
 }
 
 
