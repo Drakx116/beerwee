@@ -254,6 +254,12 @@ body {
 #presentation-rafters {
     margin: 1em auto;
     width: 96px;
+    cursor: pointer;
+    transition: ease .2s;
+}
+
+#presentation-rafters:hover {
+    opacity: .6;
 }
 
 

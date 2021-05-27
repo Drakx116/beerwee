@@ -5,6 +5,7 @@ const illus = document.getElementById('entrance-illus');
 const presentation = document.getElementById('presentation');
 const steps = document.getElementById('steps');
 const circles = document.getElementsByClassName('circle');
+const rafters = document.getElementById('presentation-rafters');
 
 const anchors = [
     { target: document.getElementById('navbar'), offset: 0 },
@@ -13,14 +14,17 @@ const anchors = [
     { target: document.getElementById('article'), offset: 16  }
 ];
 
-validate.onclick = async e => {
+// ENTRANCE - FIRES ANIMATIONS
+validate.onclick = async () => {
     illus.style.display = 'none';
 
     await slideUp(entrance, 1200);
     await bottomReveal(presentation, 1200);
     await slideLeft(steps, 800);
-}
+};
 
+
+// STEPS MANAGEMENTS
 for (let i = 0; i < circles.length; i++) {
     const circle = circles[i];
     circle.onclick = async e => {
@@ -32,9 +36,16 @@ for (let i = 0; i < circles.length; i++) {
     }
 }
 
+// SCROLL EVENT
 window.onscroll = async () => {
     const current = getCurrentVisibleStep();
     updateSelectedCircle(current);
+};
+
+
+// RAFTERS SCROLL
+rafters.onclick = async () => {
+    await slideToAnchor(1);
 };
 
 
@@ -109,12 +120,12 @@ async function slideToAnchor(id, duration = 500) {
 ///////////
 
 
-function updateSelectedCircle(i) {
+function updateSelectedCircle(selected) {
     for (let j = 0; j < circles.length; j++) {
         circles[j].classList.remove('current');
     }
 
-    circles[i].classList.add('current');
+    circles[selected].classList.add('current');
 }
 
 function getCurrentVisibleStep() {
