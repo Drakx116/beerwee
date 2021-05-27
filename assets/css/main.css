@@ -705,6 +705,7 @@ body {
 
 footer {
     background-color: var(--first-tint);
+    overflow: hidden;
 }
 
 footer:before {
@@ -801,6 +802,39 @@ footer:before {
 
 #footer-credentials > span {
     margin-top: 1em;
+}
+
+#footer-bottles {
+    width: 100%;
+    height: 200px;
+    margin-top: -200px;
+    overflow: hidden;
+}
+
+#footer-bottles img {
+    overflow: hidden;
+    height: 200px;
+    margin-top: 50px;
+    right: 0;
+}
+
+#footer-bottles img:nth-child(1) {
+    float: right;
+    transform: rotateZ(0deg);
+}
+
+#footer-bottles img:nth-child(2) {
+    float: right;
+    transform: rotateZ(-30deg);
+    margin-top: 60px;
+    margin-right: -35px;
+}
+
+#footer-bottles img:nth-child(3) {
+    float: right;
+    transform: rotateZ(-60deg);
+    margin-top: 80px;
+    margin-right: -45px;
 }
 
 
@@ -1386,6 +1420,10 @@ footer:before {
     #footer-address, #footer-links {
         width: 80%;
         margin-top: 4em;
+    }
+
+    #footer-bottles {
+        display: none;
     }
 }
 
