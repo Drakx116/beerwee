@@ -4,6 +4,14 @@ const validate = document.getElementById('validate-entrance');
 const illus = document.getElementById('entrance-illus');
 const presentation = document.getElementById('presentation');
 const steps = document.getElementById('steps');
+const circles = document.getElementsByClassName('circle');
+
+const anchors = [
+    { target: document.getElementById('navbar'), offset: 0 },
+    { target: document.getElementById('slogan-text'), offset: 48 },
+    { target: document.getElementById('recipe'), offset: 48 },
+    { target: document.getElementById('article'), offset: 16  }
+];
 
 validate.onclick = async e => {
     illus.style.display = 'none';
@@ -11,6 +19,16 @@ validate.onclick = async e => {
     await slideUp(entrance, 1200);
     await bottomReveal(presentation, 1200);
     await slideLeft(steps, 800);
+}
+
+for (let i = 0; i < circles.length; i++) {
+    const circle = circles[i];
+    circle.onclick = async e => {
+        e.preventDefault();
+
+        updateSelectedCircle(i);
+        await slideToAnchor(i);
+    }
 }
 
 
@@ -62,4 +80,33 @@ async function slideLeft(target, duration = 5000) {
     target.style.transitionDuration = duration + 'ms';
 
     return new Promise(resolve => { setTimeout(resolve, duration) });
+}
+
+async function slideToAnchor(id, duration = 500) {
+    const anchor = anchors[id]['target'];
+    const offset = anchors[id]['offset'];
+
+    window.scrollTo({
+        top: anchor.offsetTop - offset,
+        left: 0,
+        behavior: 'smooth'
+    });
+
+    return new Promise(resolve => { setTimeout(resolve, duration) });
+}
+
+
+
+
+////////////
+// UTILS //
+///////////
+
+
+function updateSelectedCircle(i) {
+    for (let j = 0; j < circles.length; j++) {
+        circles[j].classList.remove('current');
+    }
+
+    circles[i].classList.add('current');
 }
