@@ -156,6 +156,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: translateX(1000px);
 }
 
 #steps > ul > li {

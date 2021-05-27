@@ -3,12 +3,14 @@ const main = document.getElementById('main');
 const validate = document.getElementById('validate-entrance');
 const illus = document.getElementById('entrance-illus');
 const presentation = document.getElementById('presentation');
+const steps = document.getElementById('steps');
 
 validate.onclick = async e => {
     illus.style.display = 'none';
 
     await slideUp(entrance, 1200);
     await bottomReveal(presentation, 1200);
+    await slideLeft(steps, 800);
 }
 
 
@@ -50,6 +52,13 @@ async function slideUp(target, duration = 500) {
 async function bottomReveal(target, duration = 500) {
     target.style.opacity = "1";
     target.style.transform = "translateY(0)";
+    target.style.transitionDuration = duration + 'ms';
+
+    return new Promise(resolve => { setTimeout(resolve, duration) });
+}
+
+async function slideLeft(target, duration = 5000) {
+    target.style.transform = "translateX(0)";
     target.style.transitionDuration = duration + 'ms';
 
     return new Promise(resolve => { setTimeout(resolve, duration) });
