@@ -26,10 +26,16 @@ for (let i = 0; i < circles.length; i++) {
     circle.onclick = async e => {
         e.preventDefault();
 
-        updateSelectedCircle(i);
+        // Unused anymore - Already triggered by window scroll event
+        // updateSelectedCircle(i);
         await slideToAnchor(i);
     }
 }
+
+window.onscroll = async () => {
+    const current = getCurrentVisibleStep();
+    updateSelectedCircle(current);
+};
 
 
 
@@ -109,4 +115,21 @@ function updateSelectedCircle(i) {
     }
 
     circles[i].classList.add('current');
+}
+
+function getCurrentVisibleStep() {
+    // Ignores first scroll event on page load (entrance section)
+    if (!window.pageYOffset) return 0;
+
+    // Current user position (middle screen)
+    const position = window.pageYOffset + window.innerHeight / 2;
+
+    const slogan  = anchors[1]['target'].offsetTop - anchors[1]['offset'];
+    const recipe  = anchors[2]['target'].offsetTop - anchors[2]['offset'];
+    const article = anchors[3]['target'].offsetTop - anchors[3]['offset'];
+
+    if (position <= slogan)  return 0;
+    if (position > slogan && position <= recipe)  return 1;
+    if (position > recipe && position <= article) return 2;
+    return 3;
 }
