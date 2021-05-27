@@ -140,11 +140,11 @@
                 </div>
 
                 <div id="article-add-to-cart">
-                    <label for="input-number"> Quantité </label>
+                    <label for="input-number"> Quantité (max. 50) </label>
 
                     <div id="article-actions">
                         <div id="input-number-container">
-                            <input readonly id="input-number" type="text" value="1">
+                            <input readonly pattern="[0-9]{1,2}" id="input-number" type="text" value="1">
                             <div id="input-number-buttons">
                                 <span id="input-number-plus">+</span>
                                 <span id="input-number-minus">-</span>

@@ -9,6 +9,10 @@ const rafters = document.getElementById('presentation-rafters');
 const bottle = document.getElementById('article-bottle');
 const blob = document.getElementById('collage-blob');
 
+const inputNumber = document.getElementById('input-number');
+const inputNumberPlus = document.getElementById('input-number-plus');
+const inputNumberMinus = document.getElementById('input-number-minus');
+
 const anchors = [
     { target: document.getElementById('navbar'), offset: 0 },
     { target: document.getElementById('slogan-text'), offset: 72 },
@@ -39,8 +43,13 @@ for (let i = 0; i < circles.length; i++) {
     }
 }
 
-// SCROLL EVENT
 
+// QUANTITY SELECTION
+[ inputNumberMinus, inputNumberPlus ].forEach((input, index) => {
+    input.onclick = () => updateQuantity(index);
+});
+
+// SCROLL EVENT
 let bottleIsSpilled = false;
 
 window.onscroll = async () => {
@@ -159,6 +168,21 @@ async function reveal(target, duration = 500) {
 // UTILS //
 ///////////
 
+function updateQuantity(quantity) {
+    if (!quantity) {
+        quantity = -1;
+    }
+
+    const current = parseInt(inputNumber.value);
+    const total = current + quantity;
+
+    if (!total || total > 50) {
+        return false;
+    }
+
+    inputNumber.value = total;
+    return true;
+}
 
 function updateSelectedCircle(selected) {
     for (let j = 0; j < circles.length; j++) {
