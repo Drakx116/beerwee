@@ -1096,6 +1096,14 @@ footer:before {
         margin: 5em .5em;
     }
 
+    .circle > span {
+        display: none;
+    }
+
+    .circle:hover > span {
+        display: none;
+    }
+
     .circle {
         width: 14px;
         height: 14px;
