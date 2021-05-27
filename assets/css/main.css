@@ -659,8 +659,82 @@ footer {
 
 
 
+
+
 /* MEDIA QUERIES */
 
+
+
+/* ENTRANCE */
+
+@media screen and (max-width: 1770px) {
+    #entrance-modale {
+        width: calc(40% - 5em);
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    #entrance-illus {
+        display: none;
+    }
+
+    #entrance-modale {
+        width: calc(60% - 5em);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #entrance-illus {
+        display: none;
+    }
+
+    #entrance-modale {
+        width: calc(90% - 3em);
+        padding: 1.5em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #entrance-hey {
+        font-size: 48px;
+    }
+
+    #entrance-label {
+        font-size: 22px;
+    }
+
+    #entrance-paragraph {
+        margin-top: 1em;
+        font-size: 18px;
+    }
+
+    #entrance-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    #entrance-buttons > button {
+        width: 72px;
+        height: 72px;
+        font-size: 28px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    #entrance-header > img {
+        padding: 1em 0;
+        width: 72px;
+    }
+}
+
+
+
+/* MAIN */
 
 @media screen and (max-width: 1835px) {
     #slogan-text {
@@ -1118,6 +1192,10 @@ footer {
 }
 
 @media screen and (max-width: 340px) {
+    #slogan-instagram-posts {
+        margin-top: -750px;
+    }
+
     #article-add-to-cart {
         text-align: center;
     }
