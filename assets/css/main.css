@@ -295,6 +295,40 @@ body {
     margin-left: 80%;
 }
 
+#slogan-illustrations  > img {
+    position: absolute;
+}
+
+#slogan-illustration-1 {
+    width: 96px;
+    margin-top: -750px;
+    right: 40px;
+}
+
+#slogan-illustration-2 {
+    width: 72px;
+    margin-top: -650px;
+    left: 10px;
+}
+
+#slogan-illustration-3 {
+    width: 72px;
+    margin-top: -350px;
+    right: 40px;
+}
+
+#slogan-illustration-4 {
+    width: 72px;
+    margin-top: -350px;
+    left: 30px;
+}
+
+#slogan-illustration-4 {
+    width: 72px;
+    margin-top: -350px;
+    left: 20px;
+}
+
 #slogan-text {
     position: absolute;
     width: 50%;
