@@ -47,6 +47,7 @@ window.onscroll = async () => {
 
     if (!bottleIsSpilled && current === 3) {
         await spillBottle(1000);
+        await bubble(700);
         bottleIsSpilled = true;
     }
 };
@@ -132,6 +133,15 @@ async function spillBottle(duration = 500) {
     bottle.style.transitionDuration = duration + 'ms';
 
     return delay(duration);
+}
+
+async function bubble(duration = 500) {
+    bottle.classList.add('bottle-bubbles-hidden');
+
+    await delay(1)
+    bottle.classList.add('bottle-bubbles-shown');
+
+    return delay(duration - 1);
 }
 
 
