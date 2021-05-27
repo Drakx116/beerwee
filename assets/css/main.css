@@ -113,6 +113,7 @@ body {
 
 #navbar {
     width: 100%;
+    z-index: 1;
 }
 
 #navbar > ul {
@@ -177,6 +178,17 @@ body {
 
 
 /* JUMBOTRON */
+
+#collage-blob {
+    z-index: 0;
+    opacity: 0;
+    position: absolute;
+    top: -10%;
+    left: -50%;
+    transform: rotateZ(180deg);
+    width: 80%;
+    overflow: hidden;
+}
 
 #collage-bottle {
     position: absolute;
@@ -267,6 +279,7 @@ body {
 /* SLOGAN */
 
 #slogan {
+    z-index: 1;
     overflow: hidden;
 }
 

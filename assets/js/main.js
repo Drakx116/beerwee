@@ -7,6 +7,7 @@ const steps = document.getElementById('steps');
 const circles = document.getElementsByClassName('circle');
 const rafters = document.getElementById('presentation-rafters');
 const bottle = document.getElementById('article-bottle');
+const blob = document.getElementById('collage-blob');
 
 const anchors = [
     { target: document.getElementById('navbar'), offset: 0 },
@@ -20,6 +21,7 @@ validate.onclick = async () => {
     illus.style.display = 'none';
 
     await slideUp(entrance, 1200);
+    await reveal(blob);
     await bottomReveal(presentation, 1200);
     await slideLeft(steps, 800);
 };
@@ -142,6 +144,13 @@ async function bubble(duration = 500) {
     bottle.classList.add('bottle-bubbles-shown');
 
     return delay(duration - 1);
+}
+
+async function reveal(target, duration = 500) {
+    target.style.opacity = "1";
+    target.style.transitionDuration = duration + 'ms';
+
+    return delay(duration);
 }
 
 
