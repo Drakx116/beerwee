@@ -6,6 +6,7 @@ const presentation = document.getElementById('presentation');
 const steps = document.getElementById('steps');
 const circles = document.getElementsByClassName('circle');
 const rafters = document.getElementById('presentation-rafters');
+const bottle = document.getElementById('article-bottle');
 
 const anchors = [
     { target: document.getElementById('navbar'), offset: 0 },
@@ -37,9 +38,17 @@ for (let i = 0; i < circles.length; i++) {
 }
 
 // SCROLL EVENT
+
+let bottleIsSpilled = false;
+
 window.onscroll = async () => {
     const current = getCurrentVisibleStep();
     updateSelectedCircle(current);
+
+    if (!bottleIsSpilled && current === 3) {
+        await spillBottle(1000);
+        bottleIsSpilled = true;
+    }
 };
 
 
@@ -53,6 +62,10 @@ rafters.onclick = async () => {
 /////////////////
 // ANIMATIONS //
 ///////////////
+
+function delay(duration = 500) {
+    return new Promise(resolve => { setTimeout(resolve, duration) });
+}
 
 async function slideUp(target, duration = 500) {
     target.style.transitionProperty = 'height, margin, padding';
@@ -81,7 +94,7 @@ async function slideUp(target, duration = 500) {
         target.style.removeProperty('transition-property');
     }, duration);
 
-    return new Promise(resolve => { setTimeout(resolve, duration) });
+    return delay(duration);
 }
 
 async function bottomReveal(target, duration = 500) {
@@ -89,14 +102,14 @@ async function bottomReveal(target, duration = 500) {
     target.style.transform = "translateY(0)";
     target.style.transitionDuration = duration + 'ms';
 
-    return new Promise(resolve => { setTimeout(resolve, duration) });
+    return delay(duration);
 }
 
 async function slideLeft(target, duration = 5000) {
     target.style.transform = "translateX(0)";
     target.style.transitionDuration = duration + 'ms';
 
-    return new Promise(resolve => { setTimeout(resolve, duration) });
+    return delay(duration);
 }
 
 async function slideToAnchor(id, duration = 500) {
@@ -109,9 +122,17 @@ async function slideToAnchor(id, duration = 500) {
         behavior: 'smooth'
     });
 
-    return new Promise(resolve => { setTimeout(resolve, duration) });
+    return delay(duration);
 }
 
+async function spillBottle(duration = 500) {
+    await delay(800);
+
+    bottle.style.transform = "rotateZ(15deg)";
+    bottle.style.transitionDuration = duration + 'ms';
+
+    return delay(duration);
+}
 
 
 
