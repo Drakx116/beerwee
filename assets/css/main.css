@@ -367,6 +367,30 @@ body {
     margin-top: 10em;
 }
 
+#recipe:before {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-left: -950px;
+    margin-top: 250px;
+    background-image: url("../img/factory.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+}
+
+#recipe:after {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    margin-left: 600px;
+    margin-top: 300px;
+    background-image: url("../img/nice.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+}
+
 #recipe-grey-blob {
     margin: auto;
 }
@@ -974,6 +998,17 @@ footer {
         width: 140px;
     }
 
+    #recipe:before {
+        width: 200px;
+        height: 200px;
+        margin-left: -800px;
+        margin-top: 250px;
+    }
+
+    #recipe:after {
+        margin-left: 550px;
+    }
+
     #button-buy > button {
         padding: .5em 2em;
         font-size: 20px;
@@ -1050,6 +1085,20 @@ footer {
 
     #presentation-description > p {
         font-size: 20px;
+    }
+
+    #recipe:before {
+        width: 250px;
+        height: 250px;
+        margin-left: -600px;
+        margin-top: -70px;
+    }
+
+    #recipe:after {
+        width: 300px;
+        height: 300px;
+        margin-left: 510px;
+        margin-top: 350px;
     }
 
     #article {
@@ -1132,6 +1181,20 @@ footer {
 
     #recipe {
         justify-content: center;
+    }
+
+    #recipe:before {
+        width: 200px;
+        height: 200px;
+        margin-left: -350px;
+        margin-top: -70px;
+    }
+
+    #recipe:after {
+        width: 160px;
+        height: 160px;
+        margin-left: 340px;
+        margin-top: 450px;
     }
 
     #recipe-grey-blob {
@@ -1285,6 +1348,14 @@ footer {
 
     #slogan-instagram-logo {
         margin: .5em auto;
+    }
+
+    #recipe:before {
+        display: none;
+    }
+
+    #recipe:after {
+        display: none;
     }
 
     #article-heading {
