@@ -80,16 +80,10 @@ function delay(duration = 500) {
 }
 
 async function slideUp(target, duration = 500) {
-    target.style.transitionProperty = 'height, margin, padding';
     target.style.transitionDuration = duration + 'ms';
-    target.style.boxSizing = 'border-box';
     target.style.height = target.offsetHeight + 'px';
     target.style.overflow = 'hidden';
     target.style.height = 0 + 'px';
-    target.style.paddingTop = 0 + 'px';
-    target.style.paddingBottom = 0 + 'px';
-    target.style.marginTop = 0 + 'px';
-    target.style.marginBottom = 0 + 'px';
 
     // Immediately displays the main section
     main.style.display = 'flex';
@@ -97,10 +91,6 @@ async function slideUp(target, duration = 500) {
     window.setTimeout( () => {
         target.style.display = 'none';
         target.style.removeProperty('height');
-        target.style.removeProperty('padding-top');
-        target.style.removeProperty('padding-bottom');
-        target.style.removeProperty('margin-top');
-        target.style.removeProperty('margin-bottom');
         target.style.removeProperty('overflow');
         target.style.removeProperty('transition-duration');
         target.style.removeProperty('transition-property');
