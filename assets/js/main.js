@@ -10,9 +10,9 @@ const bottle = document.getElementById('article-bottle');
 
 const anchors = [
     { target: document.getElementById('navbar'), offset: 0 },
-    { target: document.getElementById('slogan-text'), offset: 48 },
-    { target: document.getElementById('recipe'), offset: 48 },
-    { target: document.getElementById('article'), offset: 16  }
+    { target: document.getElementById('slogan-text'), offset: 72 },
+    { target: document.getElementById('recipe'), offset: 72 },
+    { target: document.getElementById('article'), offset: 72  }
 ];
 
 // ENTRANCE - FIRES ANIMATIONS
