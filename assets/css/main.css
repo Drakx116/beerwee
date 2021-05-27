@@ -1192,7 +1192,7 @@ footer {
 
     #steps {
         top: 0;
-        right: 0;
+        right: 2px;
         display: flex;
         flex-direction: column;
         justify-content: center;
